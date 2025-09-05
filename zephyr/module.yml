@@ -1,6 +1,6 @@
-name: zmk-driver-custom-battery  
-build:  
-  cmake: .  
-  kconfig: Kconfig  
-  settings:  
+name: zmk-driver-battery-nimh
+build:
+  cmake: .
+  kconfig: Kconfig
+  settings:
     dts_root: .
