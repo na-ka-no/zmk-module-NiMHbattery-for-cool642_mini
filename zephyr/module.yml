@@ -1,6 +1,4 @@
-name: zmk-driver-battery-nimh
+name: zmk-module-NiMHbattery-for-cool642_mini
 build:
   cmake: .
   kconfig: Kconfig
-  settings:
-    dts_root: .
