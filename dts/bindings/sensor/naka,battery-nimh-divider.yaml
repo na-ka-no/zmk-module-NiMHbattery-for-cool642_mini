@@ -1,8 +1,20 @@
-# Copyright (c) 2020 The ZMK Contributors
-# SPDX-License-Identifier: MIT
+j# SPDX-License-Identifier: MIT
+title: TDN NiMH Battery Voltage Divider
+description: ADC + voltage divider battery sensor with NiMH SoC mapping
+compatible: "naka,battery-nimh-divider"
 
-description: Battery SoC monitoring using voltage divider
+include: [adc-channel.yaml]
 
-compatible: "zmk,battery_nimh_divider.c"
-
-include: voltage-divider.yaml
+properties:
+  output-ohms:
+    type: int
+    required: true
+    description: Resistor to ground in ohms (R2)
+  full-ohms:
+    type: int
+    required: true
+    description: R1 + R2 in ohms (top + bottom)
+  power-gpios:
+    type: phandle-array
+    required: false
+    description: Optional GPIO to power the divider
