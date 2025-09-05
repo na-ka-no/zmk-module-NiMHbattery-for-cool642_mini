@@ -1,0 +1,8 @@
+menu "TDN Battery (NiMH) Driver"
+config TDN_BATTERY_NIMH_DIVIDER
+    bool "Enable NiMH battery divider driver"
+    select ADC
+    select SENSOR
+    help
+      ADCで電圧を読み、NiMH向けのSoC算出を行う独自ドライバ。
+endmenu
