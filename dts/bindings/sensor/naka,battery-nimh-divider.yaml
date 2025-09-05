@@ -3,6 +3,6 @@
 
 description: Battery SoC monitoring using voltage divider
 
-compatible: "zmk,battery_custom.c"
+compatible: "zmk,battery_nimh_divider.c"
 
 include: voltage-divider.yaml
